@@ -30,7 +30,7 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "publish-package": "yarn build && yarn publish --access --non-interactive public"
+    "publish-package": "yarn build && yarn publish --access public --non-interactive"
   },
   "peerDependencies": {},
   "husky": {
