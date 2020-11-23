@@ -47,7 +47,7 @@ jobs:
       -   name: publish
           run: |
             yarn config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-            yarn run-script publish-package
+            yarn publish-package
           env:
             CI: true
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
