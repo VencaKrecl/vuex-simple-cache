@@ -6,14 +6,14 @@
 
 * simple cache for vuex action
 
-## How to install
+### How to install
 ```bash
 npm install vuex-simple-cache
 # OR
 yarn add vuex-simple-cache
 ```
 
-## How to use
+### How to use
 ```js
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
@@ -44,6 +44,11 @@ store.registerModule('test', {
   }
 })
 ```
+
+### API - cacheAction
+* key - name of key from vuex state
+* action - standard vuex action
+* expiration - time in seconds 
 
 [npm]: https://img.shields.io/npm/v/@vencakrecl/vuex-simple-cache.svg?style=flat-square
 [license]: https://img.shields.io/npm/l/@vencakrecl/vuex-simple-cache.svg?style=flat-square
