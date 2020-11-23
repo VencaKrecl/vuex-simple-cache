@@ -119,4 +119,31 @@ describe('test vuex simple cache', () => {
       },
     });
   });
+
+  it('expiration', async () => {
+    const store = new Store({});
+
+    store.registerModule('test', {
+      state: {
+        items: [{ name: 'cache' }],
+      },
+      actions: {
+        [TEST_ACTION_CACHE]: cacheAction(
+          'items',
+          () => {
+            // call API
+            return [{ name: 'test' }];
+          },
+          2
+        ),
+      },
+    });
+
+    let data = await store.dispatch(TEST_ACTION_CACHE);
+    expect(data).toStrictEqual([{ name: 'cache' }]);
+    // wait for expiration
+    await new Promise(r => setTimeout(r, 2 * 1000));
+    data = await store.dispatch(TEST_ACTION_CACHE);
+    expect(data).toStrictEqual([{ name: 'test' }]);
+  });
 });
