@@ -17,7 +17,7 @@ yarn add vuex-simple-cache
 ```js
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
-import { cacheAction } from 'vuex-simple-cache';
+import VuexSimpleCache from 'vuex-simple-cache';
 
 Vue.use(Vuex);
 
