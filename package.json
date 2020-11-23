@@ -1,8 +1,18 @@
 {
   "name": "@vencakrecl/vuex-simple-cache",
-  "author": "Venca Krecl",
-  "version": "1.0.0-alpha.1",
+  "author": "Venca Krecl <venca.email@gmail.com>",
+  "description": "Simple cache for vuex action",
+  "version": "1.0.0-alpha.6",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/VencaKrecl/vuex-simple-cache"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "cache"
+  ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -19,7 +29,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "publish-package": "yarn publish --non-interactive --access public"
   },
   "peerDependencies": {},
   "husky": {
