@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="184bcd5b-af49-4441-a571-1a5df1a0254f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1khHa14Mo3jpXKBakQClSk88Flz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Jest.test cache.action">
+    <configuration name="test cache.action" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/cache.test.ts" />
+      <test-names>
+        <test-name value="test cache" />
+        <test-name value="action" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test cache.works" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/cache.test.ts" />
+      <test-names>
+        <test-name value="test cache" />
+        <test-name value="works" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.test cache.action" />
+        <item itemvalue="Jest.test cache.works" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="184bcd5b-af49-4441-a571-1a5df1a0254f" name="Default Changelist" comment="" />
+      <created>1606145963235</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606145963235</updated>
+      <workItem from="1606145964320" duration="7485000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="774" y="348" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606146526001">
+      <screen x="72" y="27" width="2488" height="1327" />
+    </state>
+    <state x="774" y="348" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.2488.1327@72.27.2488.1327" timestamp="1606146526001" />
+    <state width="2465" height="353" key="GridCell.Tab.0.bottom" timestamp="1606153445887">
+      <screen x="72" y="27" width="2488" height="1327" />
+    </state>
+    <state width="2465" height="353" key="GridCell.Tab.0.bottom/72.27.2488.1327@72.27.2488.1327" timestamp="1606153445887" />
+    <state width="2465" height="353" key="GridCell.Tab.0.center" timestamp="1606153445885">
+      <screen x="72" y="27" width="2488" height="1327" />
+    </state>
+    <state width="2465" height="353" key="GridCell.Tab.0.center/72.27.2488.1327@72.27.2488.1327" timestamp="1606153445885" />
+    <state width="2465" height="353" key="GridCell.Tab.0.left" timestamp="1606153445884">
+      <screen x="72" y="27" width="2488" height="1327" />
+    </state>
+    <state width="2465" height="353" key="GridCell.Tab.0.left/72.27.2488.1327@72.27.2488.1327" timestamp="1606153445884" />
+    <state width="2465" height="353" key="GridCell.Tab.0.right" timestamp="1606153445886">
+      <screen x="72" y="27" width="2488" height="1327" />
+    </state>
+    <state width="2465" height="353" key="GridCell.Tab.0.right/72.27.2488.1327@72.27.2488.1327" timestamp="1606153445886" />
+  </component>
+</project>
