@@ -23,12 +23,15 @@ Vue.use(Vuex);
 
 const store = new Store({});
 
+// create for every module
+const cache = new VuexSimpleCache()
+
 store.registerModule('test', {
   state: {
     items: [{ name: 'cache' }],
   },
   actions: {
-    testAction: cacheAction('items', ({ commit }) => { // cache data for 30 seconds
+    testAction: cache.cacheAction('items', ({ commit }) => { // cache data for 30 seconds
       // call API
       const data = [{ name: 'cache' }];
 
@@ -45,7 +48,7 @@ store.registerModule('test', {
 })
 ```
 
-### API - cacheAction
+### API - VuexSimpleCache.cacheAction
 * key - name of key from vuex state
 * action - standard vuex action
 * expiration - time in seconds 

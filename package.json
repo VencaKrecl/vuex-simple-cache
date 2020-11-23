@@ -2,7 +2,7 @@
   "name": "@vencakrecl/vuex-simple-cache",
   "author": "Venca Krecl <venca.email@gmail.com>",
   "description": "Simple cache for vuex action",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "license": "MIT",
   "repository": {
     "type": "git",

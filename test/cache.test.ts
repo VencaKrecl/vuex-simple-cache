@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
-import { cacheAction } from '../src';
+import VuexSimpleCache from '../src';
 
 Vue.use(Vuex);
 const TEST_ACTION = 'TEST_ACTION';
@@ -10,6 +10,7 @@ const TEST_MUTATION_CACHE = 'TEST_CACHE';
 
 describe('test vuex simple cache', () => {
   it('cacheAction', async () => {
+    const cache = new VuexSimpleCache();
     const state = {
       string: 'test',
       stringEmpty: '',
@@ -21,48 +22,48 @@ describe('test vuex simple cache', () => {
       objectEmpty: {},
     };
 
-    let res = cacheAction('string', () => {
+    let res = cache.cacheAction('string', () => {
       expect(true).toBe(false);
     })({ state });
     expect(res).toStrictEqual('test');
 
-    res = cacheAction('stringEmpty', ({ state }) => {
+    res = cache.cacheAction('stringEmpty', ({ state }) => {
       expect(state.stringEmpty).toBe('');
 
       return 'test';
     })({ state });
     expect(res).toStrictEqual('test');
 
-    res = cacheAction('number', () => {
+    res = cache.cacheAction('number', () => {
       expect(true).toBe(false);
     })({ state });
     expect(res).toStrictEqual(5);
 
-    res = cacheAction('numberEmpty', () => {
+    res = cache.cacheAction('numberEmpty', () => {
       expect(state.numberEmpty).toBe(0);
 
       return 5;
     })({ state });
     expect(res).toStrictEqual(5);
 
-    res = cacheAction('array', () => {
+    res = cache.cacheAction('array', () => {
       expect(true).toBe(false);
     })({ state });
     expect(res).toStrictEqual([1]);
 
-    res = cacheAction('arrayEmpty', () => {
+    res = cache.cacheAction('arrayEmpty', () => {
       expect(state.arrayEmpty).toStrictEqual([]);
 
       return [1];
     })({ state });
     expect(res).toStrictEqual([1]);
 
-    res = cacheAction('object', () => {
+    res = cache.cacheAction('object', () => {
       expect(true).toBe(false);
     })({ state });
     expect(res).toStrictEqual({ 1: 1 });
 
-    res = cacheAction('objectEmpty', () => {
+    res = cache.cacheAction('objectEmpty', () => {
       expect(state.objectEmpty).toStrictEqual({});
 
       return { 1: 1 };
@@ -71,6 +72,7 @@ describe('test vuex simple cache', () => {
   });
 
   it('vuex', async () => {
+    const cache = new VuexSimpleCache();
     const store = new Store({});
 
     store.registerModule('test', {
@@ -87,7 +89,7 @@ describe('test vuex simple cache', () => {
 
           return data;
         },
-        [TEST_ACTION_CACHE]: cacheAction('itemsCache', ({ commit }) => {
+        [TEST_ACTION_CACHE]: cache.cacheAction('itemsCache', ({ commit }) => {
           // call API
           const data = [{ name: 'cache' }];
 
@@ -121,6 +123,7 @@ describe('test vuex simple cache', () => {
   });
 
   it('expiration', async () => {
+    const cache = new VuexSimpleCache();
     const store = new Store({});
 
     store.registerModule('test', {
@@ -128,7 +131,7 @@ describe('test vuex simple cache', () => {
         items: [{ name: 'cache' }],
       },
       actions: {
-        [TEST_ACTION_CACHE]: cacheAction(
+        [TEST_ACTION_CACHE]: cache.cacheAction(
           'items',
           () => {
             // call API
