@@ -1,4 +1,9 @@
-*.log
+# OS
 .DS_Store
+
+# IDE
+.idea
+
+# APP
 node_modules
 dist
