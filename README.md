@@ -32,19 +32,35 @@ store.registerModule('test', {
     items: [{ name: 'cachedData' }],
   },
   actions: {
-    testAction: cache.cacheAction('items', ({ commit }) => { // cache data for 30 seconds
-      // call API
-      const data = [{ name: 'newData' }];
+    testAction: cache.cacheAction(
+      'items',
+      ({ commit }) => {
+        // call API
+        const data = [{ name: 'newData' }];
 
-      commit('testMutation', data);
+        return data;
+      },
+    ),
+    testAction2: cache.cacheAction(
+      'items',
+      ({ commit }) => {
+        // call API
+        const data = [{ name: 'newData' }];
 
-      return data;
-    }, 30),
+        commit('testMutation', data);
+
+        return data;
+      },
+      120, // cache data for 120 seconds
+      ({ commit }, data) => { // onCache callback
+        commit('testMutation', data);
+      }
+    ),
   },
   mutation: {
     testMutation: (state, payload) => {
       state.items = payload
-    } 
+    }
   }
 })
 ```
@@ -52,7 +68,7 @@ store.registerModule('test', {
 ### API - VuexSimpleCache.cacheAction
 * key - name of key from vuex state
 * action - standard vuex action
-* expiration - time in seconds 
+* expiration - time in seconds (default 30s)
 * onCache - callback for cached data (default return cached data) 
 
 [npm]: https://img.shields.io/npm/v/@vencakrecl/vuex-simple-cache.svg?style=flat-square

@@ -22,7 +22,7 @@ class VuexSimpleCache {
 
       if (expiration > 0) {
         if (this.items.has(key)) {
-          if (Date.now() - expiration > (this.items.get(key) || 0)) {
+          if (Date.now() - expiration * 1000 > (this.items.get(key) || 0)) {
             this.items.delete(key);
 
             return action(context);
