@@ -2,7 +2,7 @@
   "name": "@vencakrecl/vuex-simple-cache",
   "author": "Venca Krecl <venca.email@gmail.com>",
   "description": "Simple cache for vuex action",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -56,13 +56,13 @@
     }
   ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.9.0",
-    "husky": "^4.3.0",
-    "size-limit": "^4.9.0",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "husky": "^4.3.8",
+    "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.2",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3",
     "vue": "^2.6.12",
-    "vuex": "^3.5.1"
+    "vuex": "^3.6.2"
   }
 }
