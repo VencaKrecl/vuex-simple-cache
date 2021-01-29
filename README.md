@@ -8,17 +8,17 @@
 
 ### How to install
 ```bash
-npm install vuex-simple-cache
+npm install @vencakrecl/vuex-simple-cache
 ```
 ```bash
-yarn add vuex-simple-cache
+yarn add @vencakrecl/vuex-simple-cache
 ```
 
 ### How to use
 ```js
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
-import VuexSimpleCache from 'vuex-simple-cache';
+import VuexSimpleCache from '@vencakrecl/vuex-simple-cache';
 
 Vue.use(Vuex);
 
@@ -53,6 +53,7 @@ store.registerModule('test', {
 * key - name of key from vuex state
 * action - standard vuex action
 * expiration - time in seconds 
+* onCache - callback for cached data (default return cached data) 
 
 [npm]: https://img.shields.io/npm/v/@vencakrecl/vuex-simple-cache.svg?style=flat-square
 [license]: https://img.shields.io/npm/l/@vencakrecl/vuex-simple-cache.svg?style=flat-square

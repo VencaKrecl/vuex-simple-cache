@@ -2,7 +2,7 @@
   "name": "@vencakrecl/vuex-simple-cache",
   "author": "Venca Krecl <venca.email@gmail.com>",
   "description": "Simple cache for vuex action",
-  "version": "1.0.0-alpha.9",
+  "version": "1.0.0-beta.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
+    "lint-fix": "tsdx lint --fix",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
